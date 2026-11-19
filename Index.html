@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New-Year-Pack — новогодний текстур-пак для Minecraft</title>
+<meta name="description" content="New-Year-Pack: новогодний текстур-пак для Minecraft — снег вместо дождя, праздничные мечи, кирки, топоры, элитры и не только.">
+<link rel="icon" type="image/png" href="pack.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="snow" aria-hidden="true"></canvas>
+
+<!-- ═════════ ШАПКА ═════════ -->
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <svg width="20" height="20" viewBox="0 0 8 8" aria-hidden="true" fill="#9fd8ff">
+        <rect x="3" y="0" width="2" height="8"/><rect x="0" y="3" width="8" height="2"/>
+        <rect x="1" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/>
+        <rect x="1" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/>
+      </svg>
+      New-Year-Pack
+    </a>
+    <nav class="nav-links">
+      <a class="link" href="#items">Предметы</a>
+      <a class="link" href="#shots">Скриншоты</a>
+    </nav>
+  </div>
+  <div class="gar" aria-hidden="true"></div>
+</header>
+
+<main>
+<!-- ═════════ ГЕРОЙ ═════════ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hbadge">MINECRAFT • 1.21.11 – 26.3</div>
+      <h1>New-Year-Pack</h1>
+      <p class="lead">Новогодний текстур-пак: <b>снег вместо дождя</b>, праздничные мечи, кирки, топоры, элитры и снежная земля.</p>
+      <div class="hbtns">
+        <a class="mc-btn big" href="Files/New-Year-Pack-26.3.zip" download>СКАЧАТЬ ПАК</a>
+        <button class="help-cube help-open" aria-label="Инструкция по установке">!</button>
+        <a class="mc-btn stone" href="#items">Что изменено</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="art-col">
+        <div class="art-frame checker">
+          <img class="tex" src="pack.png" alt="New-Year-Pack">
+        </div>
+        <div class="art-name">New-Year-Pack</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ ПРЕДМЕТЫ ═════════ -->
+<section id="items" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">01 • ИНВЕНТАРЬ</div>
+      <h2>Что изменено в паке</h2>
+      <p>Каждый предмет перерисован вручную к Новому году. Все текстуры 16x16.</p>
+    </div>
+
+    <!-- ТЕКСТУРЫ БЕРУТСЯ ИЗ ПАПКИ Assets -->
+    <div class="items">
+      <div class="item rv"><div class="slot checker"><img class="tex" src="Assets/diamond_sword.png" alt="Алмазный меч"></div><div class="name">Алмазный меч</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.04s"><div class="slot checker"><img class="tex" src="Assets/netherite_sword.png" alt="Незеритовый меч"></div><div class="name">Незеритовый меч</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.08s"><div class="slot checker"><img class="tex" src="Assets/diamond_pickaxe.png" alt="Алмазная кирка"></div><div class="name">Алмазная кирка</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.12s"><div class="slot checker"><img class="tex" src="Assets/netherite_pickaxe.png" alt="Незеритовая кирка"></div><div class="name">Незеритовая кирка</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.16s"><div class="slot checker"><img class="tex" src="Assets/diamond_axe.png" alt="Алмазный топор"></div><div class="name">Алмазный топор</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.2s"><div class="slot checker"><img class="tex" src="Assets/netherite_axe.png" alt="Незеритовый топор"></div><div class="name">Незеритовый топор</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.24s"><div class="slot checker"><img class="tex" src="Assets/elytra.png" alt="Элитры"></div><div class="name">Элитры</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.28s"><div class="slot checker"><img class="tex" src="Assets/mace.png" alt="Булава"></div><div class="name">Булава</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.32s"><div class="slot checker"><img class="tex" src="Assets/totem_of_undying.png" alt="Тотем"></div><div class="name">Тотем</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.36s"><div class="slot checker"><img class="tex" src="Assets/cobweb.png" alt="Паутина"></div><div class="name">Паутина</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.4s"><div class="slot checker"><img class="tex" src="Assets/bamboo.png" alt="Бамбук"></div><div class="name">Бамбук</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.44s"><div class="slot checker"><img class="tex" src="Assets/golden_apple.png" alt="Золотое яблоко"></div><div class="name">Золотое яблоко</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.48s"><div class="slot checker"><img class="tex" src="Assets/golden_carrot.png" alt="Золотая морковь"></div><div class="name">Золотая морковь</div><span class="st">изменено</span></div>
+      <div class="item rv" style="--d:.52s"><div class="slot checker"><img class="tex" src="Assets/powder_snow_bucket.png" alt="Снежная земля"></div><div class="name">Снежная земля</div><span class="st">изменено</span></div>
+    </div>
+
+    <div class="snow-banner rv">
+      <h3>СНЕГ ВМЕСТО ДОЖДЯ</h3>
+      <p>Дождь в игре полностью заменён на снег. <b>Теперь всегда зима</b> — в любом биоме, в любую погоду.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ СКРИНШОТ + ОПИСАНИЕ ═════════ -->
+<section id="shots">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-num">02 • СКРИНШОТ</div>
+      <h2>Как выглядит пак</h2>
+      <p>Нажми на картинку, чтобы рассмотреть ближе.</p>
+    </div>
+    <!-- ЧТОБЫ ДОБАВИТЬ СКРИНШОТ: положи файл в Screnhot и скопируй блок .shot -->
+    <div class="shot-layout rv">
+      <div class="shot"><img src="Screnhot/Scrin1.png" alt="Скриншот из пака"></div>
+      <aside class="shot-desc">
+        <h3>ОПИСАНИЕ ПАКА</h3>
+        <p class="d-lead">Все блоки и предметы, которые были изменены:</p>
+        <ul>
+          <li>Алмазный и незеритовый мечи</li>
+          <li>Алмазная и незеритовая кирки</li>
+          <li>Алмазный и незеритовый топоры</li>
+          <li>Элитры</li>
+          <li>Булава</li>
+          <li>Тотем бессмертия</li>
+          <li>Паутина</li>
+          <li>Бамбук</li>
+          <li>Золотое яблоко</li>
+          <li>Золотая морковь</li>
+          <li>Снежная земля</li>
+          <li>Дождь заменён на снег</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ═════════ ТЁМНЫЙ ФУТЕР С ШЕЙДИНГОМ ═════════ -->
+<footer>
+  <div class="fl">New-Year-Pack • <span id="year"></span></div>
+  <div class="fs">Новогодний текстур-пак для Minecraft, версии 1.21.11 – 26.3. Не является официальным продуктом Mojang.</div>
+  <div class="f-links"><a href="https://pfaumc.io" target="_blank" rel="noopener">pfaumc.io</a></div>
+</footer>
+
+<!-- плавающее окно с инструкцией -->
+<div class="modal" id="helpModal" hidden role="dialog" aria-label="Инструкция по установке">
+  <div class="modal-win">
+    <div class="modal-head">КАК УСТАНОВИТЬ ПАК <button class="modal-x" id="helpClose" aria-label="Закрыть">X</button></div>
+    <ol class="modal-steps">
+      <li><b>1</b> Нажми кнопку «Скачать» и сохрани архив <code>New-Year-Pack-26.3.zip</code>.</li>
+      <li><b>2</b> Нажми Win+R, введи <code>%appdata%\.minecraft\resourcepacks</code> и нажми Enter.</li>
+      <li><b>3</b> Перенеси архив в открывшуюся папку. Распаковывать не нужно.</li>
+      <li><b>4</b> В игре: Настройки — Пакеты ресурсов — выбери New-Year-Pack.</li>
+    </ol>
+    <p class="modal-note">Если папки нет — создай её сам с именем resourcepacks.</p>
+  </div>
+</div>
+
+<!-- лайтбокс -->
+<div class="lb" id="lb" hidden role="dialog" aria-label="Просмотр скриншота">
+  <button class="lb-x" id="lbX" aria-label="Закрыть">X</button>
+  <button class="lb-p" id="lbP" aria-label="Назад">&#8249;</button>
+  <img id="lbImg" alt="">
+  <button class="lb-n" id="lbN" aria-label="Вперёд">&#8250;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

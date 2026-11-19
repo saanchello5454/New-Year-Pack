@@ -1,0 +1,181 @@
+/* ================================================
+   New-Year-Pack — стили сайта
+   ================================================ */
+:root{
+  --bg:#0a1124; --bg2:#0c1430; --panel:#101b3a;
+  --ink:#e8f1ff; --mut:#9db1d9;
+  --ice:#9fd8ff; --red:#d63c3c; --green:#43e07a; --gold:#ffd257;
+  --px:'Press Start 2P', monospace;
+  --body:'Rubik', sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+::selection{background:var(--red);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit}
+code{background:#0e1630;color:var(--gold);padding:2px 6px;font-size:12px;word-break:break-all}
+
+#snow{position:fixed;inset:0;z-index:60;pointer-events:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px;position:relative;z-index:2}
+
+.checker{background:conic-gradient(#1a2340 25%,#131a33 0 50%,#1a2340 0 75%,#131a33 0) 0 0/16px 16px}
+
+/* гирлянда */
+.gar{display:flex;justify-content:space-between;padding:0 8px}
+.gar span{width:9px;height:9px;animation:blink 1.6s ease-in-out infinite}
+.gar span:nth-child(4n+1){background:var(--red);box-shadow:0 0 7px var(--red)}
+.gar span:nth-child(4n+2){background:var(--gold);box-shadow:0 0 7px var(--gold);animation-delay:.4s}
+.gar span:nth-child(4n+3){background:var(--green);box-shadow:0 0 7px var(--green);animation-delay:.8s}
+.gar span:nth-child(4n+4){background:var(--ice);box-shadow:0 0 7px var(--ice);animation-delay:1.2s}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* шапка */
+header{position:sticky;top:0;z-index:50;background:rgba(10,17,36,.95);border-bottom:3px solid #1c2a52}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+.logo{font-family:var(--px);font-size:12px;color:#fff;text-decoration:none;display:flex;gap:10px;align-items:center;text-shadow:2px 2px 0 #12345e}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a.link{font-family:var(--px);font-size:9px;color:var(--mut);text-decoration:none}
+.nav-links a.link:hover{color:#fff}
+
+/* кнопки Minecraft */
+.mc-btn{display:inline-block;font-family:var(--px);font-size:12px;color:#fff;text-decoration:none;
+  text-shadow:2px 2px 0 rgba(0,0,0,.55);background:#3fae5c;border:3px solid;
+  border-color:#8ff0a8 #1c6b34 #1c6b34 #8ff0a8;padding:16px 22px;cursor:pointer;
+  box-shadow:0 5px 0 rgba(0,0,0,.35);transition:transform .08s,box-shadow .08s,filter .2s}
+.mc-btn:hover{filter:brightness(1.12)}
+.mc-btn:active{transform:translateY(4px);box-shadow:0 1px 0 rgba(0,0,0,.35)}
+.mc-btn.stone{background:#6f6f6f;border-color:#b5b5b5 #3d3d3d #3d3d3d #b5b5b5}
+.mc-btn.big{font-size:14px;padding:20px 28px}
+
+/* кубик с ! */
+.help-cube{width:54px;height:54px;flex:none;font-family:var(--px);font-size:22px;color:#3d2814;
+  background:var(--gold);border:3px solid;border-color:#ffe9a8 #8a6a1d #8a6a1d #ffe9a8;
+  cursor:pointer;box-shadow:0 5px 0 rgba(0,0,0,.35);transition:transform .08s,box-shadow .08s,filter .2s}
+.help-cube:hover{filter:brightness(1.1)}
+.help-cube:active{transform:translateY(4px);box-shadow:0 1px 0 rgba(0,0,0,.35)}
+
+/* герой */
+.hero{padding:80px 0 70px;background:
+  radial-gradient(700px 340px at 80% 10%, rgba(159,216,255,.12), transparent 60%),
+  linear-gradient(#0a1226, #0c1430)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hbadge{display:inline-block;font-family:var(--px);font-size:9px;color:var(--gold);
+  background:#1a1430;border:3px solid #4a3a12;padding:10px 14px;margin-bottom:26px}
+h1{font-family:var(--px);font-size:clamp(22px,4vw,42px);line-height:1.35;color:#fff;
+  text-shadow:4px 4px 0 #12345e;margin-bottom:20px}
+.lead{font-size:18px;color:var(--mut);max-width:500px;margin-bottom:30px;font-weight:600}
+.lead b{color:var(--ice)}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+
+.hero-art{display:flex;justify-content:center}
+.art-col{text-align:center}
+.art-frame{width:230px;height:230px;display:grid;place-items:center;padding:18px;
+  border:4px solid;border-color:#33487f #060b1c #060b1c #33487f;
+  box-shadow:8px 8px 0 rgba(0,0,0,.35);animation:float 5s ease-in-out infinite}
+.art-frame img{width:100%;height:100%;image-rendering:pixelated;object-fit:contain}
+.art-frame img.missing{visibility:hidden}
+.art-name{font-family:var(--px);font-size:11px;color:var(--gold);margin-top:18px;text-shadow:2px 2px 0 #000;line-height:1.8}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+/* секции */
+section{padding:80px 0}
+.sec-head{margin-bottom:44px}
+.sec-num{font-family:var(--px);font-size:9px;color:var(--red);margin-bottom:14px}
+.sec-head h2{font-family:var(--px);font-size:clamp(16px,2.4vw,24px);color:#fff;text-shadow:3px 3px 0 #12345e;margin-bottom:12px;line-height:1.6}
+.sec-head p{color:var(--mut);max-width:600px}
+
+/* появление при скролле */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* предметы */
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:14px}
+.item{background:var(--panel);border:3px solid #22335f;padding:14px;text-align:center;box-shadow:5px 5px 0 rgba(0,0,0,.3)}
+.slot{width:88px;height:88px;margin:0 auto 12px;display:grid;place-items:center;
+  border:3px solid;border-color:#060b1c #33487f #33487f #060b1c}
+.slot img{width:72px;height:72px;image-rendering:pixelated;object-fit:contain}
+.slot img.missing{visibility:hidden}
+.item .name{font-family:var(--px);font-size:8px;color:#fff;line-height:1.8}
+.item .st{font-size:11px;color:var(--green);font-weight:800;display:block;margin-top:6px}
+
+/* баннер про снег */
+.snow-banner{margin-top:26px;background:var(--panel);border:3px solid #22335f;padding:30px;
+  box-shadow:5px 5px 0 rgba(0,0,0,.3);position:relative;overflow:hidden;
+  background-image:radial-gradient(rgba(255,255,255,.16) 1.5px, transparent 1.5px);background-size:14px 14px}
+.snow-banner h3{font-family:var(--px);font-size:13px;color:var(--ice);margin-bottom:12px;text-shadow:2px 2px 0 #12345e}
+.snow-banner p{color:var(--mut);max-width:560px;font-size:15.5px}
+.snow-banner b{color:#fff}
+
+/* скриншот + описание */
+.shot-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:26px;align-items:start}
+.shot{border:3px solid;border-color:#060b1c #33487f #33487f #060b1c;overflow:hidden;
+  cursor:zoom-in;background:#0a1124;box-shadow:6px 6px 0 rgba(0,0,0,.3);margin:0 auto;width:100%}
+.shot img{width:100%;height:auto;object-fit:contain;transition:transform .8s ease}
+.shot:hover img{transform:scale(1.03)}
+.shot-desc{background:var(--panel);border:3px solid #22335f;padding:26px;box-shadow:6px 6px 0 rgba(0,0,0,.3)}
+.shot-desc h3{font-family:var(--px);font-size:11px;color:var(--ice);margin-bottom:14px;line-height:1.8;text-shadow:2px 2px 0 #12345e}
+.shot-desc .d-lead{font-size:14.5px;color:var(--mut);margin-bottom:14px}
+.shot-desc ul{list-style:none}
+.shot-desc ul li{font-size:14px;color:#c6d6f2;padding:4px 0 4px 20px;position:relative}
+.shot-desc ul li::before{content:"";position:absolute;left:2px;top:12px;width:7px;height:7px;background:var(--green)}
+
+/* плавающее окно с инструкцией */
+.modal{position:fixed;inset:0;z-index:95;background:rgba(4,8,20,.82);display:grid;place-items:center;padding:24px}
+.modal[hidden]{display:none}
+.modal-win{width:min(560px,100%);background:var(--panel);border:4px solid;
+  border-color:#33487f #060b1c #060b1c #33487f;box-shadow:12px 12px 0 rgba(0,0,0,.5);animation:pop .22s ease}
+@keyframes pop{from{transform:scale(.92);opacity:0}}
+.modal-head{display:flex;justify-content:space-between;align-items:center;gap:12px;
+  background:#0e1630;padding:14px 16px;font-family:var(--px);font-size:11px;color:var(--gold);
+  border-bottom:3px solid #22335f}
+.modal-x{font-family:var(--px);font-size:11px;background:#6f6f6f;color:#fff;border:3px solid;
+  border-color:#b5b5b5 #3d3d3d #3d3d3d #b5b5b5;padding:8px 10px;cursor:pointer}
+.modal-x:hover{filter:brightness(1.2)}
+.modal-steps{list-style:none;padding:24px 26px 6px;display:grid;gap:16px}
+.modal-steps li{position:relative;padding-left:38px;font-size:14.5px;color:#c6d6f2}
+.modal-steps li b{position:absolute;left:0;top:2px;width:24px;height:24px;background:var(--gold);
+  color:#3d2814;font-family:var(--px);font-size:11px;display:grid;place-items:center}
+.modal-note{padding:16px 26px 24px;font-size:13px;color:var(--mut)}
+
+/* тёмный футер с шейдингом */
+footer{
+  position:relative;
+  background:linear-gradient(#0d1730 0%, #0a1124 55%, #060b1c 100%);
+  border-top:3px solid #1c2a52;
+  padding:38px 0 42px;
+  text-align:center;
+  box-shadow:inset 0 14px 28px rgba(0,0,0,.55);
+}
+footer::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 0%, transparent 40%, rgba(0,0,0,.45) 100%);
+}
+footer .fl{font-family:var(--px);font-size:9px;margin-bottom:10px;color:var(--ice);text-shadow:2px 2px 0 #060b1c;position:relative}
+footer .fs{font-size:13px;color:var(--mut);position:relative}
+.f-links{margin-top:16px;position:relative}
+.f-links a{font-family:var(--px);font-size:10px;color:var(--gold);text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:3px}
+.f-links a:hover{color:var(--red);border-color:var(--red)}
+
+/* лайтбокс */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(4,8,20,.94);display:grid;place-items:center;padding:30px}
+.lb[hidden]{display:none}
+.lb img{max-width:88vw;max-height:82vh;border:4px solid #fff;box-shadow:10px 10px 0 rgba(0,0,0,.5)}
+.lb button{position:absolute;font-family:var(--px);background:var(--panel);color:#fff;border:3px solid #2c3d6e;padding:13px 15px;cursor:pointer;font-size:13px}
+.lb button:hover{filter:brightness(1.4)}
+.lb-x{top:20px;right:20px}
+.lb-p{left:20px;top:50%;transform:translateY(-50%)}
+.lb-n{right:20px;top:50%;transform:translateY(-50%)}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .shot-layout{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .nav-links a.link{display:none}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.15s !important}
+  .rv{opacity:1;transform:none}
+}
